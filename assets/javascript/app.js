@@ -3,50 +3,50 @@ var quiz = $("#app");
 var allQuestions = [{
             question: "What state's motto is 'North to Future'?",
             choices: ["North Dakota", "Alaska", "Montana", "Maine"],
-            correctAnswer: 1
+            correctAnswer: "Alaska"
         },
 
         {
             question: "What southeastern state boasts the cities of Frog Jump, Only, and Sweet Lips?",
             choices: ["Georgia", "South Carolina", "Tennessee", "Florida"],
-            correctAnswer: 2
+            correctAnswer: "Tennessee"
         },
 
         {
             question: 'What southern U.S. city is sometimes nicknamed "Little Cuba"?',
             choices: ["Key West", "Miami", "Cuba City", "Jacksonville"],
-            correctAnswer: 1
+            correctAnswer: "Miami"
         },
 
         {
             question: "What state leads the nation in copper production?",
             choices: ["North Dakota", "South Dakota", "Montana", "Arizona"],
-            correctAnswer: 3
+            correctAnswer: "Arizona"
         },
 
 
         {
             question: "What state's name means tribal town in the Creek Ingian language?",
             choices: ["Alabama", "Alaska", "Arkansas", "Georgia"],
-            correctAnswer: 0
+            correctAnswer: "Alabama"
         },
 
         {
             question: "What state takes its name from a Spanish word meaning snow-clad?",
-            choices: ["Texas", "Colorado", "Nevada"],
-            correctAnswer: 2
+            choices: ["Texas", "Colorado", "Nevada", "New Mexico"],
+            correctAnswer: "Nevada"
         },
 
         {
             question: "What state shares its border with only one other state?",
             choices: ["Maine", "Michigan", "Delaware", "Florida"],
-            correctAnswer: 0
+            correctAnswer: "Maine"
         },
 
         {
             question: "What state ranks first in state boat registrations?",
             choices: ["Florida", "North Carolina", "Michigan", "Maryland"],
-            correctAnswer: 2
+            correctAnswer: "Michigan"
         }];
 
 var timer;
@@ -80,7 +80,7 @@ start: function() {
             for (var i = 0; i < allQuestions.length; i++) {
                 quiz.append("<h2>" + allQuestions[i].question + "</h2>");
                 for (var j = 0; j < allQuestions[i].choices.length; j++) {
-                    quiz.append("<input type='radio' name='question-" +i+ "'value='" + allQuestions[i].choices[j] + "''>" + allQuestions[i].choices[j]);
+                    quiz.append("<input type='radio' name='question-" +i+"'value='" + allQuestions[i].choices[j] + "''>" + allQuestions[i].choices[j]);
                    } 
                 }
             quiz.append("<div><button id='done'>Done</button><div>");
